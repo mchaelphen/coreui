@@ -39,6 +39,7 @@ const Users = React.lazy(() => import('./views/users/Users'));
 const User = React.lazy(() => import('./views/users/User'));
 
 const JournalEntry = React.lazy(() => import('./views/accounting/JournalEntry'));
+const JournalEntryNewEntry = React.lazy(() => import('./views/accounting/JournalEntryNewEntry'));
 
 const routes = [
   { path: '/', exact: true, name: 'Home' },
@@ -81,7 +82,8 @@ const routes = [
   { path: '/widgets', name: 'Widgets', component: Widgets },
   { path: '/users', exact: true, name: 'Users', component: Users },
   { path: '/users/:id', exact: true, name: 'User Details', component: User },
-  { path: '/journal-entry', exact: true, name: 'Journal Entry', component: JournalEntry }
+  { path: '/journal-entry', exact: true, name: 'Journal Entry', component: JournalEntry },
+  { path: '/journal-entry/new-entry', exact: true, name: 'New Entry', component: JournalEntryNewEntry }
 ];
 
 export default routes;

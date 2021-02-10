@@ -31,7 +31,7 @@ const JournalEntry = () => {
         <CCol>
           <CCard>
             <CCardHeader>
-            <CButton color="primary" className="px-4 my-3">CREATE NEW</CButton>
+            <CButton color="primary" className="px-4 my-3" to="/journal-entry/new-entry">CREATE NEW</CButton>
               <h4>List Data</h4>
             </CCardHeader>
             <CCardBody>
