@@ -82,7 +82,7 @@ const routes = [
   { path: '/widgets', name: 'Widgets', component: Widgets },
   { path: '/users', exact: true, name: 'Users', component: Users },
   { path: '/users/:id', exact: true, name: 'User Details', component: User },
-  { path: '/journal-entry', exact: true, name: 'Journal Entry', component: JournalEntry },
+  { path: '/journal-entry', exact: true, name: 'Transaction / Journal Entry', component: JournalEntry },
   { path: '/journal-entry/new-entry', exact: true, name: 'New Entry', component: JournalEntryNewEntry }
 ];
 

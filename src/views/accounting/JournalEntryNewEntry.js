@@ -29,7 +29,7 @@ const JournalEntryNewEntry = () => {
                     <CCol sm-6>
                         <CFormGroup>
                         <CLabel htmlFor="ccmonth">JOURNAL TYPE</CLabel>
-                        <CSelect custom name="ccmonth" id="ccmonth">
+                        <CSelect className="testing" custom name="ccmonth" id="ccmonth">
                             <option value="1">1</option>
                             <option value="2">2</option>
                             <option value="3">3</option>
@@ -48,7 +48,7 @@ const JournalEntryNewEntry = () => {
                     <CCol sm-6>
                     <CFormGroup>
                         <CLabel htmlFor="company">JOURNAL NUMBER</CLabel>
-                        <CInput id="company" placeholder="Enter your company name" disabled />
+                        <CInput id="company" className="testing" placeholder="Enter your company name" disabled />
                     </CFormGroup>
                     </CCol>
                 </CRow>

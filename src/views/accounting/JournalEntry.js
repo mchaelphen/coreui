@@ -21,7 +21,7 @@ const getBadge = status => {
       default: return 'primary'
     }
   }
-  const fields = ['No','No. Journal', 'Date', 'Created', 'Action']
+  const fields = ['id','journal', 'date', 'created', 'action']
   
 
 const JournalEntry = () => {
@@ -38,24 +38,17 @@ const JournalEntry = () => {
             <CDataTable
               items={usersData}
               fields={fields}
+              // columnFilter
+              tableFilter
               hover
               striped
               bordered
               size="sm"
               itemsPerPage={10}
               pagination
-              scopedSlots = {{
-                'status':
-                  (item)=>(
-                    <td>
-                      <CBadge color={getBadge(item.status)}>
-                        {item.status}
-                      </CBadge>
-                    </td>
-                  )
-              },
+              scopedSlots = {
               {
-                'Action':
+                'action':
                   (item)=>(
                     <td>
                       <CButton color="primary" className="px-4">Edit</CButton>
