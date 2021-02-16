@@ -1,5 +1,6 @@
 import React from 'react'
 import CIcon from '@coreui/icons-react'
+import { freeSet } from '@coreui/icons'
 
 const _nav =  [
   {
@@ -13,52 +14,127 @@ const _nav =  [
     }
   },
   {
-    _tag: 'CSidebarNavTitle',
-    _children: ['Master']
-  },
-  {
-    _tag: 'CSidebarNavDropdown',
-    name: 'Mastering',
-    route: '/base',
-    icon: 'cil-puzzle',
-    _children: [
-      {
-        _tag: 'CSidebarNavItem',
-        name: 'Classification',
-        to: '/base/breadcrumbs',
-      },
-      {
-        _tag: 'CSidebarNavItem',
-        name: 'Sub-Classification',
-        to: '/base/cards',
-      },
-      {
-        _tag: 'CSidebarNavItem',
-        name: 'Reference',
-        to: '/base/cards',
-      },
-      {
-        _tag: 'CSidebarNavItem',
-        name: 'Ledger',
-        to: '/base/cards',
-      },
-      {
-        _tag: 'CSidebarNavItem',
-        name: 'Sub-Ledger',
-        to: '/base/cards',
-      }
-    ],
+    _tag: 'CSidebarNavItem',
+    name: 'Reports',
+    to: '/reports',
+    icon: <CIcon name="cil-speedometer" customClasses="c-sidebar-nav-icon"/>,
   },
   {
     _tag: 'CSidebarNavTitle',
-    _children: ['Transaction']
+    _children: ['________________________________________________']
   },
   {
     _tag: 'CSidebarNavItem',
-    name: 'Journal Entry',
-    to: '/journal-entry',
-    icon: 'cil-drop',
+    name: 'Cash & Bank',
+    to: '/register',
+    icon: <CIcon content={freeSet.cilBank} customClasses="c-sidebar-nav-icon"/>,
   },
+  {
+    _tag: 'CSidebarNavItem',
+    name: 'Sales',
+    to: '/invoices',
+    icon: <CIcon name="cil-speedometer" customClasses="c-sidebar-nav-icon"/>,
+  },
+  {
+    _tag: 'CSidebarNavItem',
+    name: 'Purchases',
+    to: '/purchases',
+    icon: <CIcon name="cil-speedometer" customClasses="c-sidebar-nav-icon"/>,
+  },
+  {
+    _tag: 'CSidebarNavItem',
+    name: 'Expenses',
+    to: '/expenses',
+    icon: <CIcon name="cil-speedometer" customClasses="c-sidebar-nav-icon"/>,
+  },
+  {
+    _tag: 'CSidebarNavTitle',
+    _children: ['________________________________________________']
+  },
+  {
+    _tag: 'CSidebarNavItem',
+    name: 'Contacts',
+    to: '/contacts',
+    icon: <CIcon name="cil-speedometer" customClasses="c-sidebar-nav-icon"/>,
+  },
+  {
+    _tag: 'CSidebarNavItem',
+    name: 'Products',
+    to: '/products',
+    icon: <CIcon name="cil-speedometer" customClasses="c-sidebar-nav-icon"/>,
+  },
+  {
+    _tag: 'CSidebarNavItem',
+    name: 'Asset Management',
+    to: '/asset-management',
+    icon: <CIcon name="cil-speedometer" customClasses="c-sidebar-nav-icon"/>,
+  },
+  {
+    _tag: 'CSidebarNavItem',
+    name: 'Chart of Accounts',
+    to: '/accounts/chart-of-accounts',
+    icon: <CIcon name="cil-speedometer" customClasses="c-sidebar-nav-icon"/>,
+  },
+  {
+    _tag: 'CSidebarNavTitle',
+    _children: ['________________________________________________']
+  },
+  {
+    _tag: 'CSidebarNavItem',
+    name: 'Settings',
+    to: '/company/setting',
+    icon: <CIcon name="cil-settings" customClasses="c-sidebar-nav-icon"/>,
+  },
+  {
+    _tag: 'CSidebarNavTitle',
+    _children: ['________________________________________________']
+  },
+
+
+  // {
+  //   _tag: 'CSidebarNavDropdown',
+  //   name: 'Mastering',
+  //   route: '/base',
+  //   icon: 'cil-puzzle',
+  //   _children: [
+  //     {
+  //       _tag: 'CSidebarNavItem',
+  //       name: 'Classification',
+  //       to: '/base/breadcrumbs',
+  //     },
+  //     {
+  //       _tag: 'CSidebarNavItem',
+  //       name: 'Sub-Classification',
+  //       to: '/base/cards',
+  //     },
+  //     {
+  //       _tag: 'CSidebarNavItem',
+  //       name: 'Reference',
+  //       to: '/base/cards',
+  //     },
+  //     {
+  //       _tag: 'CSidebarNavItem',
+  //       name: 'Ledger',
+  //       to: '/base/cards',
+  //     },
+  //     {
+  //       _tag: 'CSidebarNavItem',
+  //       name: 'Sub-Ledger',
+  //       to: '/base/cards',
+  //     }
+  //   ],
+  // },
+  // {
+  //   _tag: 'CSidebarNavTitle',
+  //   _children: ['Transaction']
+  // },
+  // {
+  //   _tag: 'CSidebarNavItem',
+  //   name: 'Journal Entry',
+  //   to: '/journal-entry',
+  //   icon: 'cil-drop',
+  // },
+
   // {
   //   _tag: 'CSidebarNavTitle',
   //   _children: ['Theme']
