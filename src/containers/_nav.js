@@ -7,21 +7,13 @@ const _nav =  [
     _tag: 'CSidebarNavItem',
     name: 'Dashboard',
     to: '/dashboard',
-    icon: <CIcon name="cil-speedometer" customClasses="c-sidebar-nav-icon"/>,
-    badge: {
-      color: 'info',
-      text: 'NEW',
-    }
+    icon: <CIcon name="cil-home" customClasses="c-sidebar-nav-icon"/>,
   },
   {
     _tag: 'CSidebarNavItem',
     name: 'Reports',
     to: '/reports',
-    icon: <CIcon name="cil-speedometer" customClasses="c-sidebar-nav-icon"/>,
-  },
-  {
-    _tag: 'CSidebarNavTitle',
-    _children: ['________________________________________________']
+    icon: <CIcon content={freeSet.cilBarChart} customClasses="c-sidebar-nav-icon"/>,
   },
   {
     _tag: 'CSidebarNavItem',
@@ -32,52 +24,44 @@ const _nav =  [
   {
     _tag: 'CSidebarNavItem',
     name: 'Sales',
-    to: '/invoices',
-    icon: <CIcon name="cil-speedometer" customClasses="c-sidebar-nav-icon"/>,
+    to: '/sales',
+    icon: <CIcon content={freeSet.cilTag} customClasses="c-sidebar-nav-icon"/>,
   },
   {
     _tag: 'CSidebarNavItem',
     name: 'Purchases',
     to: '/purchases',
-    icon: <CIcon name="cil-speedometer" customClasses="c-sidebar-nav-icon"/>,
+    icon: <CIcon content={freeSet.cilCart} customClasses="c-sidebar-nav-icon"/>,
   },
   {
     _tag: 'CSidebarNavItem',
     name: 'Expenses',
     to: '/expenses',
-    icon: <CIcon name="cil-speedometer" customClasses="c-sidebar-nav-icon"/>,
-  },
-  {
-    _tag: 'CSidebarNavTitle',
-    _children: ['________________________________________________']
+    icon: <CIcon content={freeSet.cilMoney} customClasses="c-sidebar-nav-icon"/>,
   },
   {
     _tag: 'CSidebarNavItem',
     name: 'Contacts',
     to: '/contacts',
-    icon: <CIcon name="cil-speedometer" customClasses="c-sidebar-nav-icon"/>,
+    icon: <CIcon content={freeSet.cilContact} customClasses="c-sidebar-nav-icon"/>,
   },
   {
     _tag: 'CSidebarNavItem',
     name: 'Products',
     to: '/products',
-    icon: <CIcon name="cil-speedometer" customClasses="c-sidebar-nav-icon"/>,
+    icon: <CIcon content={freeSet.cilIndustry} customClasses="c-sidebar-nav-icon"/>,
   },
   {
     _tag: 'CSidebarNavItem',
     name: 'Asset Management',
     to: '/asset-management',
-    icon: <CIcon name="cil-speedometer" customClasses="c-sidebar-nav-icon"/>,
+    icon: <CIcon content={freeSet.cilBuilding} customClasses="c-sidebar-nav-icon"/>,
   },
   {
     _tag: 'CSidebarNavItem',
     name: 'Chart of Accounts',
     to: '/accounts/chart-of-accounts',
-    icon: <CIcon name="cil-speedometer" customClasses="c-sidebar-nav-icon"/>,
-  },
-  {
-    _tag: 'CSidebarNavTitle',
-    _children: ['________________________________________________']
+    icon: <CIcon content={freeSet.cilList} customClasses="c-sidebar-nav-icon"/>,
   },
   {
     _tag: 'CSidebarNavItem',
@@ -85,11 +69,6 @@ const _nav =  [
     to: '/company/setting',
     icon: <CIcon name="cil-settings" customClasses="c-sidebar-nav-icon"/>,
   },
-  {
-    _tag: 'CSidebarNavTitle',
-    _children: ['________________________________________________']
-  },
-
 
   // {
   //   _tag: 'CSidebarNavDropdown',

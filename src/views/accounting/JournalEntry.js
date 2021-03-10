@@ -40,6 +40,8 @@ const JournalEntry = () => {
               fields={fields}
               // columnFilter
               tableFilter
+              columnFilter
+              className="font2"
               hover
               striped
               bordered
