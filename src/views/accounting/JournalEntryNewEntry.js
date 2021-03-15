@@ -29,15 +29,16 @@ class JournalEntryNewEntry extends React.Component {
     constructor(props) {
         super(props);
         this.state = {values: []};
+        this.payload = {payload: []}
         this.handleSubmit = this.handleSubmit.bind(this);
     }
 
-    createUI(){
+    createUI() {
         return this.state.values.map((el, i) => 
-        <CRow className="my-3">
+        <CRow className="my-3" key={this.state.values.map.toString()}>
             <CCol sm="5">
                 <CFormGroup>
-                    <CSelect custom name="account" id="account" size="lg">
+                    <CSelect custom name="account" id="acc" size="lg">
                         <option value="1">1</option>
                         <option value="2">2</option>
                         <option value="3">3</option>
@@ -55,17 +56,17 @@ class JournalEntryNewEntry extends React.Component {
             </CCol>
             <CCol sm="2">
                 <CFormGroup>
-                    <CTextarea name="desc" className="sm-textarea" size="sm"></CTextarea>
+                    <CTextarea name="description" className="sm-textarea" size="sm"></CTextarea>
                 </CFormGroup>          
             </CCol>
             <CCol sm="2">
                 <CFormGroup>
-                    <CInput id="debit" placeholder="Debit" size="lg"/>
+                    <CInput name="debit" placeholder="Debit" size="lg"/>
                 </CFormGroup>        
             </CCol>
             <CCol sm="2">
                 <CFormGroup>
-                    <CInput id="credit" placeholder="Credit" size="lg"/>
+                    <CInput name="credit" placeholder="Credit" size="lg"/>
                 </CFormGroup>                            
             </CCol>
             <CCol sm="1">
@@ -79,6 +80,10 @@ class JournalEntryNewEntry extends React.Component {
         let values = [...this.state.values];
         values[i] = event.target.value;
         this.setState({ values });
+
+        let payload = [...payload];
+        // payload[idx][fieldName] = this.state.value;
+        this.setState({payload})
      }
      
      addClick() {
@@ -92,18 +97,36 @@ class JournalEntryNewEntry extends React.Component {
      }
      
      handleSubmit(event) {
-       alert('A name was submitted: ' + this.state.values.join(', '));
-       event.preventDefault();
+        fetch(this.props.formAction, {
+            method: 'POST',
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                account: this.state.account,
+                description: this.state.description,
+                debit: this.state.debit,
+                credit: this.state.credit,
+            })
+        });
+
+        this.setState({account: '', description: '', debit: '', credit: ''});
+    //    alert('A name was submitted: ' + this.state.values.join(', '));
+    //    event.preventDefault();
      }
 
 
     render() {
-        let{inputRows} = this.state
         return (
         <>
             <CRow>
+                <CCol>
+                    <h4>Transaction</h4>
+                    <h1>Journal Entry</h1>
+                </CCol>
                 <CCol xs="12" sm="12">
-                    <CForm action="" method="post">
+                    <CForm action="http://localhost:8080/api/" method="POST" onSubmit={this.handleSubmit}>
                         <CCard>
                             {/* The Header contains form for Journal General */}
                             <CCardHeader>
